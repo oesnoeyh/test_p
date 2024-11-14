@@ -1,16 +1,31 @@
 // 페이지 로드 시 초기 화면 처리
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('first-screen').classList.remove('hidden');
+    document.getElementById('auth-screen').classList.add('hidden');
     document.getElementById('pricing-screen').classList.add('hidden');
+    document.getElementById('bank-details').classList.add('hidden');
 });
 
-// 구독하기 버튼 클릭 시 로그인 페이지로 이동 (가상 처리)
-function navigateToLogin() {
-    alert('로그인 페이지로 이동합니다!');
-    // 로그인 로직이 성공하면 요금제 화면으로 전환
+// 구독하기 버튼 클릭 시 로그인 페이지로 이동
+function navigateToAuth() {
     document.getElementById('first-screen').classList.add('hidden');
-    document.getElementById('pricing-screen').classList.remove('hidden');
+    document.getElementById('auth-screen').classList.remove('hidden');
 }
+
+// 로그인/회원가입 후 요금제 화면으로 이동
+document.getElementById('auth-form').addEventListener('submit', (e) => {
+    e.preventDefault(); // 기본 폼 제출 동작 방지
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username && password) {
+        alert('로그인/회원가입 완료!');
+        document.getElementById('auth-screen').classList.add('hidden');
+        document.getElementById('pricing-screen').classList.remove('hidden');
+    } else {
+        alert('아이디와 비밀번호를 입력하세요!');
+    }
+});
 
 // 계좌번호 섹션 표시 함수
 function showBankInfo(planType) {
