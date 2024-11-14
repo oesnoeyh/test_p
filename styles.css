@@ -1,0 +1,108 @@
+/* styles.css */
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #e50914;
+    margin: 0;
+}
+
+.intro-image {
+    display: block;
+    margin: 30px auto;
+    max-width: 90%;
+    height: auto;
+}
+
+.subscribe-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #b20710;
+}
+
+#login-section, #plans-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.plan {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.account-info {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #e50914;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    color: #888;
+}
