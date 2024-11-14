@@ -8,6 +8,45 @@ body {
     text-align: center;
 }
 
+/* 헤더 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+}
+
 /* 첫 화면 스타일 */
 #first-screen {
     display: flex;
@@ -15,12 +54,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* 화면 전체 높이 */
+    padding-top: 60px; /* 헤더 높이 확보 */
     background-color: #1c1c1c; /* 배경색 */
 }
 
 #first-screen h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #e50914;
 }
 
 .firstpage-img {
@@ -28,11 +69,25 @@ body {
     max-width: 600px; /* 최대 크기 제한 */
     height: auto;
     margin-bottom: 20px;
+    border-radius: 10px; /* 이미지 모서리 둥글게 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
 }
 
 #first-screen .btn {
     padding: 15px 20px;
     font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#first-screen .btn:hover {
+    background-color: #b00710;
+    transform: scale(1.05); /* 버튼 크기 확대 효과 */
 }
 
 /* 로그인/회원가입 화면 */
@@ -42,6 +97,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* 화면 전체 높이 */
+    padding-top: 60px; /* 헤더 높이 확보 */
 }
 
 #auth-screen input {
@@ -53,6 +109,29 @@ body {
     border-radius: 5px;
     background-color: #1c1c1c;
     color: #fff;
+    font-size: 1rem;
+}
+
+#auth-screen input::placeholder {
+    color: #aaa;
+}
+
+#auth-screen .btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#auth-screen .btn:hover {
+    background-color: #b00710;
+    transform: scale(1.05); /* 버튼 크기 확대 효과 */
 }
 
 /* 요금제 선택 화면 */
@@ -60,6 +139,7 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
+    padding-top: 80px; /* 헤더 높이 확보 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,19 +162,63 @@ body {
     text-align: left;
     color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05); /* 박스 확대 효과 */
 }
 
 .plan h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     color: #e50914;
 }
 
 .plan .btn {
     width: 100%;
     margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.plan .btn:hover {
+    background-color: #b00710;
+    transform: scale(1.05); /* 버튼 크기 확대 효과 */
 }
 
 /* 계좌정보 섹션 */
 #bank-details {
     margin-top: 20px;
     text-align: center;
+}
+
+#bank-details p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #000;
+    color: #aaa;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-text {
+    font-size: 0.8rem;
 }
