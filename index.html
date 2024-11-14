@@ -1,15 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요금제 선택</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <title>Catch The Thief - 구독하기</title>
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <h1>CATCH THE THIEF !</h1>
+        <div class="header-left">
+            <h1>CATCH THE THIEF !</h1>
+        </div>
+        <div class="header-right">
+            <button id="notice-button" class="header-btn">공지</button>
+            <button id="developer-button" class="header-btn">개발자</button>
+            <button id="signup-button" class="header-btn">회원가입</button>
+            <button id="login-button" class="header-btn">로그인</button>
+        </div>
     </header>
     <main>
         <!-- 첫 페이지: 이미지와 구독하기 버튼 -->
@@ -29,6 +38,18 @@
                 <label for="password">비밀번호:</label>
                 <input type="password" id="password" name="password" required><br>
                 <button type="button" id="login-button" class="btn">로그인</button>
+            </form>
+        </section>
+
+        <!-- 회원가입 페이지 -->
+        <section id="signup-section" style="display: none;">
+            <h2>회원가입</h2>
+            <form id="signup-form">
+                <label for="new-username">아이디:</label>
+                <input type="text" id="new-username" name="new-username" required><br>
+                <label for="new-password">비밀번호:</label>
+                <input type="password" id="new-password" name="new-password" required><br>
+                <button type="button" id="signup-submit-button" class="btn">회원가입 완료</button>
             </form>
         </section>
 
@@ -52,31 +73,18 @@
             <input type="text" id="verification-code" placeholder="인증번호 입력">
             <button class="btn">인증 후 다운로드</button>
             <p class="error-message" id="error-message">잘못된 인증번호입니다. 관리자(admin@example.com)에게 문의하세요.</p>
+            <button id="mypage-button" class="btn">마이페이지로 이동</button>
+        </section>
+
+        <!-- 마이페이지 -->
+        <section id="mypage-section" style="display: none;">
+            <h2>마이페이지</h2>
+            <p id="mypage-username">아이디: </p>
+            <button id="logout-button" class="btn">로그아웃</button>
         </section>
     </main>
     <footer>
         <p>Copyright &copy; 2024. All rights reserved.</p>
     </footer>
-    
-    <script>
-        // JavaScript 로직 추가
-        document.getElementById("subscribe-button").addEventListener("click", function() {
-            document.getElementById("intro-section").style.display = "none";
-            document.getElementById("login-section").style.display = "block";
-        });
-
-        document.getElementById("login-button").addEventListener("click", function() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            
-            // 간단한 로그인 검증 (실제 환경에서는 보안이 필요합니다)
-            if (username === "user" && password === "password") {
-                document.getElementById("login-section").style.display = "none";
-                document.getElementById("plans-section").style.display = "block";
-            } else {
-                alert("로그인 실패. 아이디와 비밀번호를 확인하세요.");
-            }
-        });
-    </script>
 </body>
 </html>
