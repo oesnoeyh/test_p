@@ -22,6 +22,12 @@ document.getElementById("login-button").addEventListener("click", function() {
     }
 });
 
+// 로그인 화면에서 회원가입 버튼 클릭 시 회원가입 화면으로 이동
+document.getElementById("signup-from-login-button").addEventListener("click", function() {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("signup-section").style.display = "block";
+});
+
 // 회원가입 버튼 클릭 시 회원가입 화면으로 이동
 document.getElementById("signup-button").addEventListener("click", function() {
     document.getElementById("intro-section").style.display = "none";
@@ -55,6 +61,15 @@ document.getElementById("mypage-button").addEventListener("click", function() {
 
 // 로그아웃 버튼 클릭 시 초기 화면으로 이동
 document.getElementById("logout-button").addEventListener("click", function() {
+    document.getElementById("mypage-section").style.display = "none";
+    document.getElementById("intro-section").style.display = "block";
+});
+
+// 헤더의 CATCH THE THIEF 클릭 시 초기 화면으로 이동
+document.querySelector(".header-left h1").addEventListener("click", function() {
+    document.getElementById("signup-section").style.display = "none";
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("plans-section").style.display = "none";
     document.getElementById("mypage-section").style.display = "none";
     document.getElementById("intro-section").style.display = "block";
 });
